@@ -31,4 +31,5 @@ bool operator == (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona Sprzezenie(LZespolona Lz);
 double modul(LZespolona Lz);
 LZespolona  operator / (LZespolona  Skl1,double Skl3);
+LZespolona operator%(LZespolona A, LZespolona B);
 #endif

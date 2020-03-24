@@ -78,3 +78,10 @@ LZespolona  operator / (LZespolona  Skl1,double Skl3)
   wynik.im=Skl1.im/Skl3;
   return wynik;
 }
+LZespolona operator%(LZespolona A, LZespolona B)
+{
+  LZespolona wynik;
+  A.re%B.re=wynik.re;
+  A.im%B.im=wynik.im;
+  return wynik;
+}
