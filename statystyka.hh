@@ -1,3 +1,4 @@
+/* modeluje pojęcie statystyki dla test*/
 struct statystyka
 {
    float ilosc_pyt;
@@ -5,4 +6,4 @@ struct statystyka
    int zle_odpowiedzi;
 };
 
-void wynik_quizu(statystyka quiz);
+void wynik_quizu(statystyka quiz); //wyswietla wynik quizu

@@ -30,7 +30,7 @@ int main(int argc, char **argv)
   cout << endl;
   cout << " Start testu arytmetyki zespolonej: " << argv[1] << endl;
   cout << endl;
-
+  
   WyrazenieZesp   WyrZ_PytanieTestowe;
   LZespolona odpowiedz;
   statystyka quiz={0,0,0};
@@ -40,20 +40,22 @@ int main(int argc, char **argv)
    quiz.ilosc_pyt++;
    cout<<"Podaj wynik Operacji : ";
    cout<<WyrZ_PytanieTestowe<<" = ";
-   cin>>odpowiedz;
-   if(cin.fail()==true){
+   cin>>odpowiedz; 
+   if(cin.fail()==true){            // 1 błąd wpisania
      cin.clear();
      cin.ignore(1000,'\n'); 
      cout<<"Blad zapisu liczby zesplonej. Sprobuj jeszcze raz:";
    cin>>odpowiedz;
-   if(cin.fail()==true){
+   if(cin.fail()==true){           //2 błąd wpisania
      cin.clear();
      cin.ignore(1000,'\n'); 
      cout<<"Blad zapisu liczby zesplonej. Sprobuj jeszcze raz:";
-   cin>>odpowiedz;if(cin.fail()==true){ cin.clear();
+   cin>>odpowiedz;
+   if(cin.fail()==true){ cin.clear();  //3 bład wpisania odpowiedz uznana za niepoprawną
      cin.ignore(1000,'\n'); cout<<"3 razy bledne wprowadzenie liczby zespolonej odpowiedz zaliczona jako bledna"<<endl;
      }}}
-   if(BazaT.IndeksPytania-1==0)
+     //jeśli liczba została wpisana poprawnie zostaje porownana z poprawnym wynikiem
+   if(BazaT.IndeksPytania-1==0)        //indeks pytania przypisuje wartośc 1 na początku pętli
     {
      if(((WyrZ_PytanieTestowe.Arg2+WyrZ_PytanieTestowe.Arg1)==odpowiedz)==true)
      {cout<<"Dobra odpowiedz."; quiz.dobre_odp++;}
