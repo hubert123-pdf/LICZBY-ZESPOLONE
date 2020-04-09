@@ -88,6 +88,18 @@ int main(int argc, char **argv)
      quiz.zle_odpowiedzi++;}
      cout<<endl;
     }
+    if(BazaT.IndeksPytania-1==4)
+    {
+      if(((WyrZ_PytanieTestowe.Arg1%WyrZ_PytanieTestowe.Arg2)==odpowiedz)==true)
+      {
+        {cout<<"Dobra odpowiedz."; quiz.dobre_odp++;}
+      }
+      else
+     {cout<<"Zla odpowiedz"<<endl<<"poprawna odpowiedz: "<<WyrZ_PytanieTestowe.Arg1%WyrZ_PytanieTestowe.Arg2;
+     quiz.zle_odpowiedzi++;}
+     cout<<endl;
+    }
+
   }
   cout << endl;
   cout << " Koniec testu" << endl;

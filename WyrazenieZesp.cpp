@@ -20,6 +20,8 @@ std::ostream& operator<<(std::ostream&tekst,WyrazenieZesp &odpowiedz)
     tmp='*';
     if(odpowiedz.Op==3)
     tmp='/';
+    if(odpowiedz.Op==4)
+    tmp='%';
   tekst<<odpowiedz.Arg1<<tmp<<odpowiedz.Arg2;
   return tekst;
 

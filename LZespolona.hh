@@ -25,6 +25,7 @@ struct  LZespolona {
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
+LZespolona  operator %(LZespolona Skle1,LZespolona Skl2);
 std::istream& operator>>(std::istream&tekst,LZespolona &odpowiedz);
 std::ostream& operator<<(std::ostream&tekst,LZespolona odpowiedz);
 bool operator == (LZespolona  Skl1,  LZespolona  Skl2);
